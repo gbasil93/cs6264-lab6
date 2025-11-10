@@ -1,0 +1,92 @@
+Assignment Questionnaire
+========================
+
+NOTE: DO NOT DELETE --> and <--, and place your answers within the marks.
+  Example:
+    -->
+      130.207.7.210, scouter.cc.gatech.edu
+    <--
+
+
+Info
+====
+
+Example:
+  Your GT Login ID: kpark21
+  Your Name: Kyuhong Park
+
+-->
+  Your GT Login ID:
+  Your Name:
+<--
+
+Task 1
+=======
+
+Q1.1 What is the seceret hash stored in /tmp/secret_1.txt?
+
+Example:
+  Hash : b06c8b2c83b223834d18795da692f699fb153195f7e3c800f1721fcbe87c6cf533b7d3456f990c058786f48edffca9588cb41f0a8403917b6d85f99431728f78
+-->
+  Hash : 30e050d48539c7008ed3e26f0dddae235b9a706e6da246e2a0bd4e42586ab18fb2882013ff921e50fd1f0af3eb0b37eb63e4ea4543184f8f014573f8c44b3986
+<--
+
+
+Q1.2.1 What is the name of the client asset directory?
+
+Example:
+  Directory name : clients_assets
+
+-->
+  Directory name : cs6264clients
+<--
+
+Q1.2.2 What is the best template file to compromise?
+
+Example:
+  Template file : js.html
+
+-->
+  Template file : scripts.html
+<--
+
+Q1.2.3 What is the hash on the Google Phishing page?
+
+Example:
+  Hash : b06c8b2c83b223834d18795da692f699fb153195f7e3c800f1721fcbe87c6cf533b7d3456f990c058786f48edffca9588cb41f0a8403917b6d85f99431728f78
+
+-->
+  Hash : 2418515ecabeb5a59f528f84ac17c489a3e01daf9c672036e2d098c96013ea6cc90d86ba6ded0757a7150ac0e19f37cc8d4d2bbe207a35b365cc5a518651de2e
+<--
+
+
+Task 2
+=======
+
+Q2.2.1 What is the query (in one line) to locate potential Google Phishing attack?
+
+Example:
+  Query : match (n) where n.type="Script" return n
+
+-->
+  Query :
+<--
+
+
+Q2.2.2 What is the query (in one line) to locate potential Fake Notification attack?
+
+Example:
+  Query : match (n) where n.type="Script" return n
+
+-->
+  Query :
+<--
+
+Q2.2.3 What is the query (in one line) to locate potential Redirect Browser attack?
+
+Example:
+  Query : match (n) where n.type="Script" return n
+
+-->
+  Query :
+<--

