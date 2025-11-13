@@ -1,6 +1,7 @@
-from graph import *
 import logging
 from collections import defaultdict
+
+from graph import *
 
 logging.basicConfig()
 logger = logging.getLogger(__name__)
@@ -357,7 +358,16 @@ class Handler:
 
         file_node = File.parse(kwargs)
         frame_id = kwargs["frameId"]
-        # TODO
+        self.log_node(file_node)
+
+        # Create frame node and Download edge from frame node to file node
+        frame_node = self.frame_id_map[frame_id]
+        frame_edge = frame_node.add_edge(file_node, EdgeType.download, {})
+        self._add_neo4j_msg(LoggerFile.FileNode, file_node.to_json())
+
+
+        self.log_edge(frame_edge)
+        self._add_neo4j_msg(LoggerFile.FrameEdge, frame_edge)
 
     @log_event_handler
     def handle_window_open(self, **kwargs):

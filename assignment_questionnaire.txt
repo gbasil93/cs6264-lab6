@@ -69,7 +69,7 @@ Example:
   Query : match (n) where n.type="Script" return n
 
 -->
-  Query :
+  Query : MATCH (f: Frame)-[r:request]->(t: Resource) WHERE t.id = "fad11c429f97618dc211c5105f3b1ee2" RETURN f, r, t
 <--
 
 

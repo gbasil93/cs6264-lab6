@@ -1,14 +1,16 @@
+import logging
+import logging.config
+import subprocess
+import threading
+from collections import defaultdict
+
+import pandas as pd
+import typer
+
 import pychrome
 from event_handler import Handler
 from graph import LOG_DIR
 from post_process import extract_edges
-import threading
-import subprocess
-import logging
-import logging.config
-import typer
-import pandas as pd
-from collections import defaultdict
 
 app = typer.Typer()
 
@@ -99,12 +101,17 @@ class Auditor:
         logger.info("add hooks to this new target")
         cdp.Target.attachedToTarget = self._handle_new_target
         self.add_event_handler(cdp)
+        logger.info("#Added event handler")
         cdp.Target.setAutoAttach(
             autoAttach=True, waitForDebuggerOnStart=True, flatten=True
         )
+        logger.info("#Set autoattach to true")
         cdp.Debugger.enable()
+        logger.info("#Debugger enabled")
         cdp.Page.enable()
+        logger.info("#Page enabled")
         cdp.Network.enable()
+        logger.info("#Network enabled")
 
         # Continue to run
         logger.info("continue this target")
