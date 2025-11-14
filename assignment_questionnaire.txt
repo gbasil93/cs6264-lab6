@@ -16,8 +16,8 @@ Example:
   Your Name: Kyuhong Park
 
 -->
-  Your GT Login ID:
-  Your Name:
+  Your GT Login ID: gbasil3
+  Your Name: Garrett Basil
 <--
 
 Task 1
@@ -69,7 +69,7 @@ Example:
   Query : match (n) where n.type="Script" return n
 
 -->
-  Query : MATCH (f: Frame)-[r:request]->(t: Resource) WHERE t.id = "fad11c429f97618dc211c5105f3b1ee2" RETURN f, r, t
+  Query : match ( f: Frame )-[ r: request ]->( e: Resource ) where e.url CONTAINS  "https://www.google.com/mail/help/images/favicon.ico" RETURN f, r, e
 <--
 
 
@@ -79,7 +79,7 @@ Example:
   Query : match (n) where n.type="Script" return n
 
 -->
-  Query :
+  Query : match (f: Frame)-[d: download]->(x: File ) RETURN f, d, x
 <--
 
 Q2.2.3 What is the query (in one line) to locate potential Redirect Browser attack?

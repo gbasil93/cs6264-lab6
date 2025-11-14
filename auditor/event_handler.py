@@ -112,6 +112,7 @@ class Handler:
             self.log_edge(nav_edge)
             self._add_neo4j_msg(LoggerFile.FrameEdge, nav_edge)
         self.current_frame = frame_node
+        logger.info(f"#current_frame = {self.current_frame}")
 
     @log_event_handler
     def handle_request_will_be_sent(self, **kwargs):
@@ -355,7 +356,7 @@ class Handler:
         - Add the file node to LoggerFile.FileNode and the the download edge to LoggerFile.FrameEdge through _add_neo4j_msg().
         - You can use self.log_node() and self.log_edge() (or print()) to check if they are successfully created.
         """
-
+        logger.info("handle_download_begin")
         file_node = File.parse(kwargs)
         frame_id = kwargs["frameId"]
         self.log_node(file_node)
